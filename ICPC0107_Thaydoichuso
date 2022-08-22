@@ -1,0 +1,9 @@
+for i in range(int(input())):
+    numberStr = input().split()
+    strOne = input()
+    strTwo = input()
+    resTwo = int(strOne.replace(
+        numberStr[0], numberStr[1])) + int(strTwo.replace(numberStr[0], numberStr[1]))
+    resOne = int(strOne.replace(
+        numberStr[1], numberStr[0])) + int(strTwo.replace(numberStr[1], numberStr[0]))
+    print(str(resOne)+' '+ str(resTwo))
