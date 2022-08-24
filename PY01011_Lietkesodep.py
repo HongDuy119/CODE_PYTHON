@@ -12,4 +12,4 @@ for i in range(int(input())):
     n = int(input())
     for j in range(22,n,2):
         if bool(j): print(j,end=" ")
-    print("")
+    print("")   

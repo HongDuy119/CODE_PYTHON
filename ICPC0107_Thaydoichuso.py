@@ -1,23 +1,17 @@
-from asyncio.windows_events import NULL
-from logging import NullHandler
+import math
 
 
-test = int(input())
-for i in range(test):
-    string = input()
-    numberStr = string.split(" ")
-    stringinput = input()
-    strOne = ""
-    strTwo=""
-    list1 = stringinput.split(" ")
-    if len(list1)==1:
-        strOne += str(list[0])
-        strTwo = input()
+for i in range(int(input())):
+    [p,q] = list(map(str,input().split()))
+    n1 = list(map(str,input().split()))
+    if len(n1)==1:
+        n2 = input()
+        sum1 = int(n1[0].replace(p,q)) + int(n2.replace(p,q))
+        sum2 =  int(n1[0].replace(q,p)) + int(n2.replace(q,p))
+        print("{0} {1}".format(min(sum1,sum2) ,max(sum1,sum2)))
     else:
-        strOne += str(list1[0])
-        strTwo += str(list1[1])
-    if int(numberStr[0]) > int(numberStr[1]):
-        numberStr[0] , numberStr[1] = numberStr[1] , numberStr[0]
-    resTwo = int(strOne.replace("numberStr[0]", "numberStr[1]")) + int(strTwo.replace("numberStr[0]", "numberStr[1]"))
-    resOne = int(strOne.replace("numberStr[1]", "numberStr[0]")) + int(strTwo.replace("numberStr[1]", "numberStr[0]"))
-    print(resOne+" "+ resTwo)
+        sum1 = int(n1[0].replace(p,q)) + int(n1[1].replace(p,q))
+        sum2 =  int(n1[0].replace(q,p)) + int(n1[1].replace(q,p))
+        print("{0} {1}".format(min(sum1,sum2) ,max(sum1,sum2)))
+        
+        
